@@ -22,6 +22,7 @@ RECONNECT_RATE = 2
 MAX_RECONNECT_COUNT = 12
 MAX_RECONNECT_DELAY = 60
 
+# Function to connect to MQTT broker
 def connect_mqtt():
     def on_connect(client, data, flags, rc):
         if rc == 0:
@@ -31,7 +32,6 @@ def connect_mqtt():
     
     # Set connecting client ID
     client = mqtt_client.Client(client_id)
-    print('Built client')
     client.on_connect = on_connect
     client.connect(broker, port)
     return client
