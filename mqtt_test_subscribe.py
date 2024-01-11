@@ -3,7 +3,8 @@ import random
 from paho.mqtt import client as mqtt_client
 
 
-broker = 'broker.emqx.io'
+# broker = 'broker.emqx.io' # tutorial broker
+broker = 'localhost' # running a local Moquitto instance
 port = 1883 # TCP port
 topic = "python/mqtt"
 # Generate a Client ID with a subscribe prefix

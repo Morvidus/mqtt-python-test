@@ -12,7 +12,8 @@ SECURE_WEBSOC_PORT = 8084
 
 # Test using TCP
 port = TCP_PORT
-broker = 'broker.emqx.io'
+# broker = 'broker.emqx.io' # tutorial broker
+broker = 'localhost' # running a local Moquitto instance
 topic = "python/mqtt"
 # Generate a Client ID with the publish prefix.
 client_id = f'publish-{random.randint(0, 1000)}'
